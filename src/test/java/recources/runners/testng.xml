@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.amazon.customlisteners.CustomListeners"></listener>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
+    </listeners>
+    <test name="Technical Test for Laptop Search">
+        <parameter name="itemKeyword" value="hp 15 inch laptop intel 11th generation core i7"></parameter>
+        <parameter name="productName" value="HP 15.6-Inch HD Touchscreen Laptop (Intel Pentium Silver N5000 1.1GHz, 4GB DDR4-2400 Memory, 1TB HDD, HDMI, HD Webcam, Win 10)"></parameter>
+        <parameter name="qty" value="3"></parameter>
+        <parameter name="expectedMessage" value="Added to Cart"></parameter>
+        <classes>
+            <class name="com.amazon.testsuite.SearchProductTest"></class>
+        </classes>
+    </test>
+    <test name="Technical Test For Mobile Search">
+        <parameter name="itemKeyword" value="samsung mobile phones 32gb galaxy a20 lte 5g"></parameter>
+        <parameter name="productName" value="Tracfone Samsung Galaxy A32 5G, 64GB,Black - Prepaid Smartphone (Locked)"></parameter>
+        <parameter name="qty" value="3"></parameter>
+        <parameter name="expectedMessage" value="Added to Cart"></parameter>
+        <classes>
+            <class name="com.amazon.testsuite.SearchProductTest"></class>
+        </classes>
+    </test>
+</suite>
